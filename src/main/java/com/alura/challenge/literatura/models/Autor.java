@@ -1,13 +1,12 @@
-package com.alura.challenge.literatura.model.clasesrecords;
-
-import com.alura.challenge.literatura.model.Libro;
+package com.alura.challenge.literatura.models;
+import com.alura.challenge.literatura.models.records.DatosLibro;
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
 @Table(name = "autores")
 public class Autor {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +17,7 @@ public class Autor {
 
     private Integer fechaFallecimiento;
 
-    @OneToMany(mappedBy = "datosAutor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     //@Transient
     private List<Libro> libros;
 
@@ -50,17 +49,17 @@ public class Autor {
         this.libros = libros;
     }
 
-    public Autor(Libro.Autor autor) {
-        this.nombre = datosAutor.nombre();
-        this.cumpleanios = datosAutor.cumpleanios();
-        this.fechaFallecimiento = datosAutor.fechaFallecimiento();
+    public Autor(com.alura.challenge.literatura.models.records.Autor autor) {
+        this.nombre = autor.nombre();
+        this.cumpleanios = autor.cumpleanios();
+        this.fechaFallecimiento = autor.fechaFallecimiento();
     }
 
     @Override
     public String toString() {
         return
                 "nombre='" + nombre + '\'' +
-                        ", cumpleanios=" + cumpleanios +
-                        ", fechaFallecimiento=" + fechaFallecimiento;
+                ", cumpleanios=" + cumpleanios +
+                ", fechaFallecimiento=" + fechaFallecimiento;
     }
 }
