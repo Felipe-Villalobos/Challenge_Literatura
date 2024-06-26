@@ -13,7 +13,7 @@ Además, proporciona herramientas para la gestión eficiente de información rel
 - **Entorno de Desarrollo Integrado (IDE):** Intellij IDEA ver. 241.15989.150 ![IDE](img/IDE.png)
 - **JDK de Java:** 17.0.11 ![JDK](img/JDK.png)
 - **Framework:** Spring Framework ![Spring](img/Spring.png)
-- **Gestión y construcción del proyecto :** Maven ![Maven](img/maven.png)
+- **Gestor de Dependencias :** Maven ![Maven](img/maven.png)
 - **API de Cosumo:** Gutendex-API ![Gutendex-API](img/Gutendex.PNG)
 - **Gestor de bases de datos :** PostgreSQL ![PostgreSQL](img/PostgresSQL.png)
 
